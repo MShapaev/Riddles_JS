@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Riddles</title>
+        
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            div {
+                margin: 30px auto 0;
+				padding: 10px;
+				width: 280px;
+				height: 30px;
+				text-align: center;
+				font: 16px Arial;
+            }
+			
+			button {
+                display: block;
+                margin: 40px auto;
+                background: gray;
+				border-radius: 5px;
+				width: 100px;
+                height: 75px;
+                font: 16px Arial;
+				color: white;
+            }
+        </style>
+        
+        <script>
+            function game() {
+                let counter = 0;
+                    
+                let riddle_1 = prompt('1. Они идут, они стоят, они звенят, они висят. По ним весь мир всегда встает, живет по ним весь наш народ.');
+                
+                if (riddle_1 == null) alert('До новых встреч!');
+                
+                if (riddle_1.toLowerCase() === 'часы') {
+                    counter++;
+                    alert('Это правильный ответ!');
+                } else {
+                alert('Это неправильный ответ');
+                }
+                
+                let riddle_2 = prompt('2. Не мяукаю, я лаю, в дом чужих я не впускаю.');
+                
+                if (riddle_2 == null) alert('До новых встреч!');
+                
+                if (riddle_2.toLowerCase() === 'собака' || riddle_2.toLowerCase() === 'собака') {
+                    counter++;
+                    alert('Это правильный ответ!');
+                } else {
+                alert('Это неправильный ответ');
+                }
+                
+                let riddle_3 = prompt('3. Она котика боится, без него пищит, резвится, эта серая малышка....');
+                
+                if (riddle_3 == null) alert('До новых встреч!');
+                
+                if (riddle_3.toLowerCase() === 'мышь' || riddle_3.toLowerCase() === 'мышка') {
+                    counter++;
+                    alert('Это правильный ответ!');
+                } else {
+                alert('Это неправильный ответ');
+                }
+                alert(`Количество угаданных загадок: ${counter}`);
+            }
+        </script>
+    </head>
+    
+    <body>
+		<div>Нажми на кнопку, чтобы начать отгадывать!</div>
+        <button type="button" onclick="game();">Угадай три загадки</button>
+    </body>
+</html>
